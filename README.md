@@ -120,3 +120,15 @@ O ESLint serve para padronizar o projeto
   - `CTRL + SHIFT + P`
   - Pesquisar por `Open User Settings (JSON)`
   - Adicionar `"editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" }`
+
+### Banco de Dados
+
+- `yarn add knex sqlite3` instala o Knex.js e driver do banco de dados do sqlite
+- Em `package.json` configurar o comando para executar o knex:
+
+  ```json
+  "scripts": {
+    "knex": "tsx ./node_modules/knex/bin/cli.js"
+  }
+
+- `yarn knex migrate:make create-documents` cria uma migration
