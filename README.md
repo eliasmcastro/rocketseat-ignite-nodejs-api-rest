@@ -132,3 +132,14 @@ O ESLint serve para padronizar o projeto
   }
 
 - `yarn knex migrate:make create-documents` cria uma migration
+- `yarn knex migrate:latest` executa todas as migrations
+- `yarn knex migrate:rollback` desfaz a última execução das migrations
+
+### Variáveis de ambiente
+
+- Criação do .env
+- `yarn add dotenv` instala o dotenv
+
+### Validação de dados
+
+- `yarn add zod` instala o zod
