@@ -143,3 +143,7 @@ O ESLint serve para padronizar o projeto
 ### Validação de dados
 
 - `yarn add zod` instala o zod
+
+### Utilizando cookies no Fastify
+
+- `yarn add @fastify/cookie` instal o @fastify/cookie
