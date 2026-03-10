@@ -116,7 +116,7 @@ O ESLint serve para padronizar o projeto
   ```
 
 - Instalar a extensão `ESlint` no VSCode
-- Abrir o arquivo de configuração do VSCode: 
+- Abrir o arquivo de configuração do VSCode:
   - `CTRL + SHIFT + P`
   - Pesquisar por `Open User Settings (JSON)`
   - Adicionar `"editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" }`
@@ -146,4 +146,23 @@ O ESLint serve para padronizar o projeto
 
 ### Utilizando cookies no Fastify
 
-- `yarn add @fastify/cookie` instal o @fastify/cookie
+- `yarn add @fastify/cookie` instala o @fastify/cookie
+
+### Testes automatizados
+
+- Testes unitários são testes que validam o comportamento de uma única unidade de código, como uma função ou método. Eles são úteis para garantir que cada parte da aplicação esteja funcionando corretamente, sem depender de outras partes.
+
+- Testes de integração são testes que validam a integração entre várias partes da aplicação, como a integração entre a camada de banco de dados e a camada de serviço. Eles são importantes para garantir que a aplicação esteja funcionando corretamente como um todo.
+
+- Testes e2e (end-to-end) são testes que validam o comportamento da aplicação como um todo, simulando a interação do usuário com a aplicação. Eles são importantes para garantir que a aplicação esteja funcionando corretamente em todos os níveis, desde a camada de interface até a camada de banco de dados.
+
+- A pirâmide de testes é uma estratégia que se baseia em ter mais testes unitários e menos testes de integração e e2e, pois testes unitários são mais rápidos e fáceis de escrever e manter do que outros tipos de testes.
+
+- `yarn add vitest -D` instal o vitest
+
+- Em `package.json` configurar o comando para executar os testes:
+
+  ```json
+  "scripts": {
+    "test": "vitest"
+  }
