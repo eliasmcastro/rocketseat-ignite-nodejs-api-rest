@@ -39,19 +39,25 @@ git clone https://github.com/eliasmcastro/rocketseat-ignite-nodejs-api-rest.git
 
 ### Passos para a execução
 
-**1. Executar aplicação**
+- Instalar as dependências do projeto
 
-Instalar as dependências do projeto
+  ```bash
+  yarn
+  ```
 
-```bash
-yarn
-```
+- Configurar as variáveis de ambiente no `.env` utilizando o `.env.example`
 
-Iniciar o servidor de desenvolvimento
+- Executar as migrations
 
-```bash
-yarn dev
-```
+  ```bash
+  yarn knex migrate:latest
+  ```
+
+- Iniciar o servidor de desenvolvimento
+
+  ```bash
+  yarn dev
+  ```
 
 A aplicação começará a ser executada em http://localhost:3333
 
@@ -176,3 +182,7 @@ O ESLint serve para padronizar o projeto
 - afterAll: É uma função que é executada uma única vez após todos os testes terem sido executados. É útil para limpar recursos compartilhados ou fechar conexões abertas.
 
 - afterEach: É uma função que é executada após cada teste. É útil para limpar o ambiente depois da execução de cada teste, por exemplo, limpar variáveis ou fechar conexões com o banco de dados.
+
+### Deploy
+
+- `yarn add tsup` instal o tsup que é uma ferramenta de "bundling"
