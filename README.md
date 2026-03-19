@@ -186,3 +186,18 @@ O ESLint serve para padronizar o projeto
 ### Deploy
 
 - `yarn add tsup` instal o tsup que é uma ferramenta de "bundling"
+- Opções para deploy
+  - [Render](https://render.com)
+  - [Fly](https://fly.io)
+  - [Railway](https://railway.com)
+- Deploy no Render
+  - Criar uma conta no Render
+  - Criar o banco de dados
+    - Postgres -> New Postgres -> Preencher as informações necessárias
+  - Criar o web service
+    - Web Service -> Git Provider -> Github -> Selecionar o repositório -> Preencher as informações necessárias
+    - Build Command: `npm install && npm run knex -- migrate:latest && npm run build`
+    - Start Command: `node build/server.js`
+    - Variáveis de ambiente
+      - DATABASE_CLIENT = pg
+      - DATABASE_URL = Colocar o valor presente no `Internal Database URL` do serviço do Postgres
