@@ -136,6 +136,7 @@ O ESLint serve para padronizar o projeto
   "scripts": {
     "knex": "tsx ./node_modules/knex/bin/cli.js"
   }
+  ```
 
 - `yarn knex migrate:make create-documents` cria uma migration
 - `yarn knex migrate:latest` executa todas as migrations
@@ -172,6 +173,7 @@ O ESLint serve para padronizar o projeto
   "scripts": {
     "test": "vitest"
   }
+  ```
 
 - `yarn add supertest @types/supertest -D` instal o supertest e suas definições de tipo
 
@@ -186,10 +188,19 @@ O ESLint serve para padronizar o projeto
 ### Deploy
 
 - `yarn add tsup` instal o tsup que é uma ferramenta de "bundling"
+- Em `package.json` configurar o comando para executar o build:
+
+  ```json
+  "scripts": {
+    "build": "tsup src --out-dir build",
+  }
+  ```
+
 - Opções para deploy
   - [Render](https://render.com)
   - [Fly](https://fly.io)
   - [Railway](https://railway.com)
+
 - Deploy no Render
   - Criar uma conta no Render
   - Criar o banco de dados
